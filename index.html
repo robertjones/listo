@@ -20,12 +20,13 @@
         <p id='challenge' class="text-4xl leading-tight h-32"></p><!--Challenge-->
       </div>
       <div class="flex-1 text-center px-4 py-6">
-        <button type="button" class="bg-blue hover:bg-blue-dark text-white font-bold py-4 px-12 rounded-full" onclick="updateCards()">New card</button>
+        <button type="button" class="bg-teal-dark hover:bg-teal-darker text-white font-bold py-4 mr-4 w-32 rounded-full" onclick="updateCards()">New card</button>
+        <button id="timer_button" type="button" class="bg-blue hover:bg-blue-dark text-white font-bold py-4 ml-4 w-32 rounded-full" onclick="startTimer()">Start timer</button>
         <div class="text-white pt-8 px-12"><a href="rules.html" class="text-white opacity-75">How to play</a></div>
       </div>
     </div>
   </div>
 </body>
+<audio id='end_sound' src="chime.mp3"></audio>
 <script src="listo.js"></script>
-
 </html>

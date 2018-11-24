@@ -168,4 +168,14 @@ updateCards = function(){
   document.querySelector('#type_description').innerHTML = types[card.type].description;
   document.querySelector('#challenge').innerHTML = card.challenge;
 };
+startTimer = function(){
+  document.querySelector('#timer_button').innerHTML = "...";
+  document.querySelector('#timer_button').style.opacity = 0.4;
+  var timeoutID = window.setTimeout(playSound, 30000);
+};
+playSound = function(){
+  document.querySelector('#end_sound').play();
+  document.querySelector('#timer_button').innerHTML = "Start timer";
+  document.querySelector('#timer_button').style.opacity = 1;
+};
 updateCards();
