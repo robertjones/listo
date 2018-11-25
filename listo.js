@@ -1,8 +1,4 @@
-// const cards = [
-//   {type: 'nines', cards: ['NBA teams', 'Football teams', 'Colours']},
-//   {type: 'sixes', cards: ['Types of hat', 'Farm animals', 'Vegetables', 'Kitchen implements']},
-//   {type: 'threes', cards: ['Celebrities', 'Books', 'Films']}
-// ];
+'use strict';
 
 const cards = [
 
@@ -161,19 +157,19 @@ const cards = [
 const types = {'One': {'title': 'Nines: match one', 'description': "One point per item that matches with exactly one other player. Write up to nine items."},
          'None': {'title': 'Sixes: match none', 'description': "One point per item that doesn't match with any other players. Write up to six items."},
          'Many': {'title': 'Threes: match many', 'description': "One point per player that an item matches with. Write up to three items."}};
-rand = n => Math.floor(Math.random()*n);
-updateCards = function(){
+const rand = n => Math.floor(Math.random()*n);
+const updateCards = function(){
   var card = cards[rand(cards.length)];
   document.querySelector('#type_title').innerHTML = types[card.type].title;
   document.querySelector('#type_description').innerHTML = types[card.type].description;
   document.querySelector('#challenge').innerHTML = card.challenge;
 };
-startTimer = function(){
+const startTimer = function(){
   document.querySelector('#timer_button').innerHTML = "...";
   document.querySelector('#timer_button').style.opacity = 0.4;
   var timeoutID = window.setTimeout(playSound, 30000);
 };
-playSound = function(){
+const playSound = function(){
   document.querySelector('#end_sound').play();
   document.querySelector('#timer_button').innerHTML = "Start timer";
   document.querySelector('#timer_button').style.opacity = 1;
