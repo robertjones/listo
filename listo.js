@@ -167,10 +167,10 @@ const updateCards = function(){
 const startTimer = function(){
   document.querySelector('#timer_button').innerHTML = "...";
   document.querySelector('#timer_button').style.opacity = 0.4;
-  var timeoutID = window.setTimeout(playSound, 30000);
-};
-const playSound = function(){
   document.querySelector('#end_sound').play();
+  var timeoutID = window.setTimeout(resetButton, 30000);
+};
+const resetButton = function(){
   document.querySelector('#timer_button').innerHTML = "Start timer";
   document.querySelector('#timer_button').style.opacity = 1;
 };
