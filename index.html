@@ -9,9 +9,11 @@
 </head>
 
 <body class="bg-grey-lighter" style="background: linear-gradient(120deg, #00C9FF 0%, #92FE9D 100%)">
+  
   <div class="absolute pin-t pin-l text-white mx-4 my-6">
     <div class="flex-1 text-4xl font-bold opacity-75">Listo</div>
   </div>
+  
   <div class="container mx-auto px-3 py-8 flex items-center h-screen max-w-sm">
     <div class="flex-1">
       <div class="flex-1 w-full text-grey-darkest text-center bg-white px-4 py-6 rounded-lg shadow-md mt-16">
@@ -22,10 +24,43 @@
       <div class="flex-1 text-center px-4 py-6">
         <button type="button" class="bg-teal-dark hover:bg-teal-darker text-white font-bold py-4 mr-4 w-32 rounded-full" onclick="updateCards()">New card</button>
         <button id="timer_button" type="button" class="bg-blue hover:bg-blue-dark text-white font-bold py-4 ml-4 w-32 rounded-full" onclick="startTimer()">Start timer</button>
-        <div class="text-white pt-8 px-12"><a href="rules.html" class="text-white opacity-75">How to play</a></div>
+      </div>
+      <div class="absolute pin-x pin-b mb-8 mx-auto text-center">
+        <a href="#about" class="inline-block no-underline px-8 py-3 leading-none border rounded-lg text-white border-white hover:border-transparent hover:text-teal-dark hover:bg-white">About</a>
       </div>
     </div>
+
+
+
+<!-- Add in an arrow or link to the rules -->
+<!-- Possibly position this section below the other in the html but have it show up on top on screen. -->
+
   </div>
+
+  <div class="bg-white">
+
+    <div class="text-grey-darker mx-auto max-w-md px-4 pt-4 pb-10 leading-normal">
+
+      <h1 id="about" class="text-center pt-4 pb-2 font-normal text-4xl text-grey-darkest leading-tight">The list-making party game</h1>
+
+      <p class="py-2">Listo is an online parlour game on your phone. Perfect for dinner parties, train journeys or family get-togethers. Compete to match as many answers as possible, no answers, or just one answer with other players.</p>
+
+      <p class="py-2">This game was inspired by the boardgame, Listography, but the challenges and cards are original.</p>
+
+      <h1 class="text-center pt-4 pb-2 font-normal text-4xl text-grey-darkest">How to play</h1>
+      <ol class="py-1 pl-4">
+        <li class="py-1"><b>Read:</b> Read the category and challenge aloud and then start the 30 second timer.</li>
+        <li class="py-1"><b>Write:</b> Everyone writes down their answers.</li> 
+        <li class="py-1"><b>Score:</b> When the buzzer sounds, the first player reads out their list to see if their answers match with other players, then the other players go through their remaining answers in turn. Players keep their own score.</li>
+      </ol>
+      <p class="py-2">For 3-8 players. Rotate the role of first player clockwise after every turn.</p>
+
+      <p class="pt-8 text-sm">Made by <a class="text-blue-dark" href="http://twitter.com/robjones">@robjones</a>.</p>
+
+    </div>
+
+  </div>
+
 </body>
 <audio id='end_sound' src="chime-30.mp3"></audio>
 <script src="listo.js"></script>
