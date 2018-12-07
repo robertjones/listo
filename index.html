@@ -9,10 +9,17 @@
 </head>
 
 <body class="bg-grey-lighter" style="background: linear-gradient(120deg, #00C9FF 0%, #92FE9D 100%)">
-  
-  <div class="absolute pin-t pin-l text-white mx-4 my-6">
-    <div class="flex-1 text-4xl font-bold opacity-75">Listo</div>
-  </div>
+
+      <div class="absolute pin-x pin-t">
+        <div class="max-w-sm mx-auto flex py-6 px-3">
+          <div class="opacity-75 flex-1 font-bold text-4xl text-white">
+            Listo
+          </div>
+          <div class="text-right flex-1">
+            <a href="#about" class="inline-block no-underline px-8 py-3 leading-none border rounded-lg text-white border-white hover:border-transparent hover:text-teal-dark hover:bg-white">About</a>
+          </div>
+        </div>
+      </div>
   
   <div class="container mx-auto px-3 py-8 flex items-center h-screen max-w-sm">
     <div class="flex-1">
@@ -24,9 +31,6 @@
       <div class="flex-1 text-center px-4 py-6">
         <button type="button" class="bg-teal-dark hover:bg-teal-darker text-white font-bold py-4 mr-4 w-32 rounded-full" onclick="updateCards()">New card</button>
         <button id="timer_button" type="button" class="bg-blue hover:bg-blue-dark text-white font-bold py-4 ml-4 w-32 rounded-full" onclick="startTimer()">Start timer</button>
-      </div>
-      <div class="absolute pin-x pin-b mb-8 mx-auto text-center">
-        <a href="#about" class="inline-block no-underline px-8 py-3 leading-none border rounded-lg text-white border-white hover:border-transparent hover:text-teal-dark hover:bg-white">About</a>
       </div>
     </div>
 
