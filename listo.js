@@ -158,8 +158,26 @@ const types = {'One': {'title': 'Nines: match one', 'description': "One point pe
          'None': {'title': 'Sixes: match none', 'description': "One point per item that doesn't match with any other players. Write up to six items."},
          'Many': {'title': 'Threes: match many', 'description': "One point per player that an item matches with. Write up to three items."}};
 const rand = n => Math.floor(Math.random()*n);
+function shuffle(array) {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+};
+var shuffledCards = shuffle(cards);
 const updateCards = function(){
-  var card = cards[rand(cards.length)];
+  var card = shuffledCards.pop();
   document.querySelector('#type_title').innerHTML = types[card.type].title;
   document.querySelector('#type_description').innerHTML = types[card.type].description;
   document.querySelector('#challenge').innerHTML = card.challenge;
